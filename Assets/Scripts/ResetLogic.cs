@@ -27,9 +27,10 @@ public class ResetLogic : MonoBehaviour
 		item = items.ToArray () [randomId];
 		if (item != null) {
 			Debug.Log ("instantiate object in reset logic");
-			currentItem = (GameObject)Instantiate (item, transform.position, transform.rotation);
+			currentItem = (GameObject)Instantiate (item, transform.position, Quaternion.identity);
 			currentItem.transform.parent = transform;
-		}
+            currentItem.transform.Find("Canvas").LookAt(GameObject.Find("Main Camera").transform);
+        }
 		rutineStarted = false;
 	}
 }
