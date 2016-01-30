@@ -27,6 +27,7 @@ GameObject:
   - 23: {fileID: 2357544}
   - 114: {fileID: 11426572}
   - 114: {fileID: 11441576}
+  - 65: {fileID: 6581012}
   m_Layer: 0
   m_Name: bad_item_beer
   m_TagString: Untagged
@@ -180,6 +181,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133642}
   m_Mesh: {fileID: 4300000, guid: 9a05e3f85778d464aa58f3616ae60ef3, type: 3}
+--- !u!65 &6581012
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133642}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23169187, y: 0.22035214, z: 0.86680454}
+  m_Center: {x: -0.000000024645137, y: -0.0000000027278382, z: 0.29089493}
 --- !u!114 &11419398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -220,7 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fire: {fileID: 0}
   bad: 1
-  score: 50
+  score: 1
 --- !u!114 &11435806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -259,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a27a16c9e50b640842b0072ff47a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 5
+  startTime: 60
   timeIndicator: {fileID: 11464208}
   timeEnded: 0
   burnLogic: {fileID: 11426572}
@@ -543,7 +556,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: score
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: startTime
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 133642}

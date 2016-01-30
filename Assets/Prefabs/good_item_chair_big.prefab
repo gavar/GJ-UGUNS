@@ -111,6 +111,7 @@ GameObject:
   - 23: {fileID: 2397716}
   - 114: {fileID: 11425186}
   - 114: {fileID: 11425524}
+  - 65: {fileID: 6514908}
   m_Layer: 0
   m_Name: good_item_chair_big
   m_TagString: Untagged
@@ -140,7 +141,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163638}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.6427877, y: 0, z: 0, w: 0.7660444}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -180,6 +181,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163638}
   m_Mesh: {fileID: 4300002, guid: 3e025ab438d82144f9eb3c05f41988a1, type: 3}
+--- !u!65 &6514908
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.140479, y: 1.1745175, z: 2.2288404}
+  m_Center: {x: 0, y: 0.023629248, z: 0.61105925}
 --- !u!114 &11409218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,7 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fire: {fileID: 0}
   bad: 0
-  score: 200
+  score: 1
 --- !u!114 &11425524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a27a16c9e50b640842b0072ff47a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 5
+  startTime: 60
   timeIndicator: {fileID: 11424842}
   timeEnded: 0
   burnLogic: {fileID: 11425186}
@@ -546,7 +559,19 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: score
-      value: 200
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.x
+      value: -0.6427877
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.w
+      value: 0.7660444
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: startTime
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
