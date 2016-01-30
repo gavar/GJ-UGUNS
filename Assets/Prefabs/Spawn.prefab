@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawn
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -23,8 +23,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -40,15 +40,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 120334, guid: d30e151df4edb4d68ba3690ff24ee30e, type: 2}
-  - {fileID: 150778, guid: d5e8f489425a34ca2aa137a129375cd7, type: 2}
   - {fileID: 104304, guid: 05a33d1e850ed49f88ce20ffc5eed470, type: 2}
+  - {fileID: 110142, guid: 2ffee70be375d4590a313df4afe74bad, type: 2}
   - {fileID: 107008, guid: 3eb1b725305d44c39aa08c14650e6e0d, type: 2}
   - {fileID: 163012, guid: 5622e7ed1975e405eb55cbd73592b9f3, type: 2}
   - {fileID: 118646, guid: 70f23b570fa5240e1ae29ad17756c708, type: 2}
-  - {fileID: 110142, guid: 2ffee70be375d4590a313df4afe74bad, type: 2}
   - {fileID: 134110, guid: 77d2d91d5df19432c8892a29aa52202b, type: 2}
   - {fileID: 185684, guid: 78665172c73ea46cdaa2f2ae21361060, type: 2}
+  - {fileID: 120334, guid: d30e151df4edb4d68ba3690ff24ee30e, type: 2}
+  - {fileID: 150778, guid: d5e8f489425a34ca2aa137a129375cd7, type: 2}
   waitTime: 0.5
 --- !u!1001 &100100000
 Prefab:
@@ -67,7 +67,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: waitTime
@@ -92,23 +92,43 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: items.Array.data[0]
       value: 
-      objectReference: {fileID: 150778, guid: d5e8f489425a34ca2aa137a129375cd7, type: 2}
+      objectReference: {fileID: 104304, guid: 05a33d1e850ed49f88ce20ffc5eed470, type: 2}
     - target: {fileID: 0}
       propertyPath: items.Array.data[1]
       value: 
-      objectReference: {fileID: 120334, guid: d30e151df4edb4d68ba3690ff24ee30e, type: 2}
+      objectReference: {fileID: 110142, guid: 2ffee70be375d4590a313df4afe74bad, type: 2}
     - target: {fileID: 0}
       propertyPath: items.Array.data[3]
       value: 
-      objectReference: {fileID: 111574, guid: f09b30a01337a4dcc9763dc6dfbd03b2, type: 2}
+      objectReference: {fileID: 118646, guid: 70f23b570fa5240e1ae29ad17756c708, type: 2}
     - target: {fileID: 0}
       propertyPath: items.Array.data[4]
       value: 
-      objectReference: {fileID: 107694, guid: 6cd19ffcc03b842488b63822386fe5e6, type: 2}
+      objectReference: {fileID: 134110, guid: 77d2d91d5df19432c8892a29aa52202b, type: 2}
     - target: {fileID: 0}
       propertyPath: items.Array.data[5]
       value: 
-      objectReference: {fileID: 124850, guid: b3d5ffe3bff6142bfa8f509d0ddab4a1, type: 2}
+      objectReference: {fileID: 185684, guid: 78665172c73ea46cdaa2f2ae21361060, type: 2}
+    - target: {fileID: 0}
+      propertyPath: items.Array.data[8]
+      value: 
+      objectReference: {fileID: 185684, guid: 78665172c73ea46cdaa2f2ae21361060, type: 2}
+    - target: {fileID: 0}
+      propertyPath: items.Array.data[2]
+      value: 
+      objectReference: {fileID: 107008, guid: 3eb1b725305d44c39aa08c14650e6e0d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: items.Array.data[6]
+      value: 
+      objectReference: {fileID: 120334, guid: d30e151df4edb4d68ba3690ff24ee30e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: items.Array.data[7]
+      value: 
+      objectReference: {fileID: 150778, guid: d5e8f489425a34ca2aa137a129375cd7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 117708}
