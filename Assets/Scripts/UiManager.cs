@@ -13,6 +13,6 @@ public class UiManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.GetComponent<Text> ().text = ""+LevelManager.score;
+		text.GetComponent<Text> ().text = ""+LevelManager.instance.Score;
 	}
 }

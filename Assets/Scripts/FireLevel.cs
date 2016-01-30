@@ -22,6 +22,6 @@ public class FireLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentEffectObject.transform.localScale = new Vector3(1, 1, LevelManager.level);
+        currentEffectObject.transform.localScale = new Vector3(1, 1, LevelManager.instance.Level);
     }
 }

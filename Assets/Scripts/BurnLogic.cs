@@ -18,16 +18,16 @@ public class BurnLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (LevelManager.score > 100*LevelManager.level)
+        if (LevelManager.instance.Score > 100*LevelManager.instance.Level)
         {
-            LevelManager.level += 0.5f;
+            LevelManager.instance.Level += 0.5f;
             Debug.Log("level fucking up");
         }
     }
 
     public void burn()
     {
-		LevelManager.score += bad ? -score : score;
+		LevelManager.instance.Score += bad ? -score : score;
     }
 
 

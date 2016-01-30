@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour
 
     void Awake()
     {
-        initialTime = startTime / LevelManager.level;
+        initialTime = startTime / LevelManager.instance.Level;
         time = initialTime;
     }
 
