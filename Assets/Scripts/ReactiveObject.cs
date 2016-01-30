@@ -7,6 +7,8 @@ public class ReactiveObject
 {
 	public event PropertyChangedEventHandler PropertyChanged;
 
+	public void NotifyDirty () { Notify(null); }
+
 	protected bool SetProperty<T> (ref T x, T value, string property)
 	{
 		if (EqualityComparer<T>.Default.Equals(x, value)) return false;
