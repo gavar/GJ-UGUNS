@@ -7,6 +7,7 @@ public class UIMenu : MonoBehaviour
 {
 	public static UIMenu instance;
 
+	public RectTransform root;
 	public Button btnPlay;
 
 	public void Awake () { instance = this; }

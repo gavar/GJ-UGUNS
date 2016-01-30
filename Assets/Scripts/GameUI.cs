@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
+	public RectTransform root;
 	public Slider fireLevelBar;
 
 	public void Start () { LevelManager.instance.PropertyChanged += OnLevelManagerUpdate; }
