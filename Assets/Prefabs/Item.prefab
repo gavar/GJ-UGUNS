@@ -228,12 +228,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 144962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385e5ad40c3b19b4f832b462b9f14e56, type: 3}
+  m_Script: {fileID: 11500000, guid: d71ee8edeefc96c4e82ba63889068e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Fire: {fileID: 0}
   bad: 0
-  score: 10
+  score: 100
 --- !u!114 &11427872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 144962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e389cc039e64d446b325f1ff9b66ef9, type: 3}
+  m_Script: {fileID: 11500000, guid: 70ed2556c0ed34845b702843fb30fc2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 5
