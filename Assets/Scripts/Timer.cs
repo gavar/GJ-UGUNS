@@ -19,6 +19,11 @@ public class Timer : MonoBehaviour
         time = initialTime;
     }
 
+	void Start ()
+	{
+		timeIndicator = GameUI.GetTimeSlider(gameObject);
+	}
+
     // Update is called once per frame
     void Update()
     {

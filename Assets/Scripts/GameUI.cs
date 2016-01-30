@@ -6,6 +6,18 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
+	public static Slider GetTimeSlider (GameObject attachPoint)
+	{
+		if (instance == null) return null;
+		if (instance.fireTime == null) return null;
+		var copy = Instantiate(instance.fireTime);
+		copy.gameObject.SetActive(true);
+		var follow = copy.gameObject.AddComponent<UIFollow>();
+		follow.point = attachPoint.transform;
+		copy.gameObject.SetActive(true);
+		return copy;
+	}
+
 	public static GameUI instance;
 
 	public GameObject root;
@@ -13,7 +25,9 @@ public class GameUI : MonoBehaviour
 	public Text scoreText;
 	public Text levelText;
 
-	public void Awake() { instance = this; }
+	public Slider fireTime;
+
+	public void Awake () { instance = this; }
 	public void Start ()
 	{
 		LevelManager.instance.PropertyChanged += OnLevelManagerUpdate;
