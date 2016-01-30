@@ -22,7 +22,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117708}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.6427877, y: 0, z: 0, w: 0.7660444}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -36,18 +36,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 117708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c567e14f371094d458ae32b01c3e8b4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1abc83d05b133f64dab214e04329e0db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 144962, guid: be42f57553dc52c4693c0a04cdec2309, type: 2}
+  - {fileID: 163638, guid: 78f053f4dfe8b4ae8a413abf273b6e2e, type: 2}
+  - {fileID: 132868, guid: bbc275e13bfea443dbde57bab47369f4, type: 2}
+  - {fileID: 133642, guid: 8f170201e8b5642bf82e85a7feb45aa9, type: 2}
+  waitTime: 0.5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: items.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: waitTime
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 117708}

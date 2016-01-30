@@ -12,8 +12,10 @@ public class LevelManager : ReactiveObject
 	[SerializeField] protected int score = 0;
 	[SerializeField] protected int maxBadStuff = 5;
 	[SerializeField] protected int badStuffCount = 0;
+	[SerializeField] protected int gameLevel;
 
 	public float Level { get { return level; } set { SetProperty(ref level, value, "Level"); } }
+	public int GameLevel { get { return gameLevel; } set { SetProperty(ref gameLevel, value, "GameLevel"); } }
 	public int Score { get { return score; } set { SetProperty(ref score, value, "Score"); } }
 	public int MaxBadStuff { get { return score; } set { SetProperty(ref score, value, "MaxBadStuff"); } }
 	public int BadStuffCount { get { return score; } set { SetProperty(ref score, value, "BadStuffCount"); } }
