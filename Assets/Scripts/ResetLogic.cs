@@ -29,8 +29,9 @@ public class ResetLogic : MonoBehaviour
 		if (item != null) {
 			currentItem = (GameObject)Instantiate (item, transform.position, Quaternion.identity);
 			currentItem.transform.parent = transform;
-			currentItem.transform.Find("item_slider").LookAt(GameObject.Find("Main Camera").transform);
+			// LookAt is now in Timer
+			// currentItem.transform.Find("item_slider").LookAt(GameObject.Find("Main Camera").transform);
         }
-		rutineStarted = false;
+		rutineStarted = false;	
 	}
 }

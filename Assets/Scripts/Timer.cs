@@ -1,49 +1,51 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿#region References
+using UnityEngine;
 using UnityEngine.UI;
+#endregion
 
 public class Timer : MonoBehaviour
 {
-    public float startTime = 5f;
-    public Slider timeIndicator;
-    public bool timeEnded = false;
-    public BurnLogic burnLogic;
-    public float procentage = 1f;
+	public float startTime = 5f;
+	public Slider timeIndicator;
+	public bool timeEnded = false;
+	public BurnLogic burnLogic;
+	public float procentage = 1f;
+	public GameObject uiPoint;
 
-    private float time;
-    private float initialTime;
+	private float time;
+	private float initialTime;
 
-    void Awake()
-    {
-        initialTime = startTime / LevelManager.instance.Level;
-        time = initialTime;
-    }
-
-	void Start ()
+	private void Awake ()
 	{
-		timeIndicator = GameUI.GetTimeSlider(gameObject);
+		initialTime = startTime / LevelManager.instance.Level;
+		time = initialTime;
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (timeEnded == true)
-        {
-           // Debug.Log("destroy object in timer");
-            Destroy(gameObject);
+	// Update is called once per frame
+	private void Update ()
+	{
+		if (timeEnded == true)
+		{
+			// Debug.Log("destroy object in timer");
+			Destroy(gameObject);
 			return;
-        }
+		}
 
-        time -= Time.deltaTime;
+		if (timeIndicator == null) timeIndicator = GameUI.GetTimeSlider(uiPoint ? uiPoint : gameObject);
+		transform.LookAt(Camera.main.transform);
 
-        procentage = (time / initialTime);
+		time -= Time.deltaTime;
 
-        timeIndicator.value = procentage;
+		procentage = (time / initialTime);
 
-        if (time <= 0 && burnLogic != null)
-        {
-            burnLogic.burn();
-            timeEnded = true;
-        }
-    }
+		timeIndicator.value = procentage;
+
+		if (time <= 0 && burnLogic != null)
+		{
+			burnLogic.burn();
+			timeEnded = true;
+		}
+	}
+
+	private void OnDestroy () { if (timeIndicator) Destroy(timeIndicator.gameObject); }
 }

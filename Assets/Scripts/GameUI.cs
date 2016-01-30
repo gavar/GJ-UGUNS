@@ -10,11 +10,16 @@ public class GameUI : MonoBehaviour
 	{
 		if (instance == null) return null;
 		if (instance.fireTime == null) return null;
-		var copy = Instantiate(instance.fireTime);
-		copy.gameObject.SetActive(true);
-		var follow = copy.gameObject.AddComponent<UIFollow>();
-		follow.point = attachPoint.transform;
-		copy.gameObject.SetActive(true);
+
+		var origin = instance.fireTime;
+		var copy = Instantiate(origin);
+		var copyGO = copy.gameObject;
+		var follow = copyGO.AddComponent<UIFollow>();
+		follow.point = attachPoint != null ? attachPoint.transform : null;
+		copyGO.transform.SetParent(origin.transform.parent);
+		copyGO.transform.localScale = origin.transform.localScale;
+		follow.Update();
+		copyGO.SetActive(true);
 		return copy;
 	}
 
@@ -27,7 +32,11 @@ public class GameUI : MonoBehaviour
 
 	public Slider fireTime;
 
-	public void Awake () { instance = this; }
+	public void Awake ()
+	{
+		instance = this;
+		if (fireTime) fireTime.gameObject.SetActive(false);
+	}
 	public void Start ()
 	{
 		LevelManager.instance.PropertyChanged += OnLevelManagerUpdate;
