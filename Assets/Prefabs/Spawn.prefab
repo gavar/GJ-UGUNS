@@ -22,7 +22,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117708}
-  m_LocalRotation: {x: -0.6427877, y: 0, z: 0, w: 0.7660444}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -43,6 +43,9 @@ MonoBehaviour:
   - {fileID: 163638, guid: 78f053f4dfe8b4ae8a413abf273b6e2e, type: 2}
   - {fileID: 132868, guid: bbc275e13bfea443dbde57bab47369f4, type: 2}
   - {fileID: 133642, guid: 8f170201e8b5642bf82e85a7feb45aa9, type: 2}
+  - {fileID: 111574, guid: f09b30a01337a4dcc9763dc6dfbd03b2, type: 2}
+  - {fileID: 107694, guid: 6cd19ffcc03b842488b63822386fe5e6, type: 2}
+  - {fileID: 124850, guid: b3d5ffe3bff6142bfa8f509d0ddab4a1, type: 2}
   waitTime: 0.5
 --- !u!1001 &100100000
 Prefab:
@@ -53,7 +56,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: items.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.x
@@ -66,6 +69,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: waitTime
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

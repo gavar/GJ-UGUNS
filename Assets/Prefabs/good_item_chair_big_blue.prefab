@@ -46,6 +46,7 @@ GameObject:
   - 23: {fileID: 2323272}
   - 114: {fileID: 11418956}
   - 114: {fileID: 11482196}
+  - 65: {fileID: 6561392}
   m_Layer: 0
   m_Name: good_item_chair_big_blue
   m_TagString: Untagged
@@ -180,6 +181,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124850}
   m_Mesh: {fileID: 4300002, guid: 3e025ab438d82144f9eb3c05f41988a1, type: 3}
+--- !u!65 &6561392
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.140479, y: 1.1745174, z: 2.22884}
+  m_Center: {x: 0, y: 0.023629244, z: 0.6110592}
 --- !u!114 &11400188
 MonoBehaviour:
   m_ObjectHideFlags: 1

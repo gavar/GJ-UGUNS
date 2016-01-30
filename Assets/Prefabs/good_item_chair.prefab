@@ -47,6 +47,7 @@ GameObject:
   - 23: {fileID: 2319184}
   - 114: {fileID: 11435928}
   - 114: {fileID: 11467338}
+  - 65: {fileID: 6535546}
   m_Layer: 0
   m_Name: good_item_chair
   m_TagString: Untagged
@@ -180,6 +181,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132868}
   m_Mesh: {fileID: 4300004, guid: 3e025ab438d82144f9eb3c05f41988a1, type: 3}
+--- !u!65 &6535546
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.140479, y: 1.1272589, z: 1.1334578}
+  m_Center: {x: 0, y: 0, z: 0.063367985}
 --- !u!114 &11435860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a27a16c9e50b640842b0072ff47a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 5
+  startTime: 60
   timeIndicator: {fileID: 11440668}
   timeEnded: 0
   burnLogic: {fileID: 11467338}
@@ -311,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fire: {fileID: 0}
   bad: 0
-  score: 100
+  score: 1
 --- !u!114 &11468714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -543,7 +556,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: score
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: startTime
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132868}

@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2332084}
   - 114: {fileID: 11456598}
   - 114: {fileID: 11486370}
+  - 65: {fileID: 6506680}
   m_Layer: 0
   m_Name: good_item_plank
   m_TagString: Untagged
@@ -180,6 +181,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111574}
   m_Mesh: {fileID: 4300000, guid: 3e025ab438d82144f9eb3c05f41988a1, type: 3}
+--- !u!65 &6506680
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.497094, y: 0.80439234, z: 0.4288899}
+  m_Center: {x: 0, y: 0.00000025331968, z: 0}
 --- !u!114 &11403224
 MonoBehaviour:
   m_ObjectHideFlags: 1
