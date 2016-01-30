@@ -23,10 +23,10 @@ public class ResetLogic : MonoBehaviour
 
 		yield return new WaitForSeconds (waitTime);
 
-		randomId = (int) Random.Range (0, items.Count - 1);
+		randomId = (int) Random.Range (0, items.Count);
+
 		item = items.ToArray () [randomId];
 		if (item != null) {
-			Debug.Log ("instantiate object in reset logic");
 			currentItem = (GameObject)Instantiate (item, transform.position, Quaternion.identity);
 			currentItem.transform.parent = transform;
 			currentItem.transform.Find("item_slider").LookAt(GameObject.Find("Main Camera").transform);

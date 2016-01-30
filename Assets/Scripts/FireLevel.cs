@@ -6,7 +6,7 @@ public class FireLevel : MonoBehaviour
 {
     public GameObject[] FireEfects;
 
-    GameObject effectLocation;
+    GameObject fireParticles;
     GameObject currentEffectObject;
     ParticleSystem currentEffect;
     int currentIndex;
@@ -15,24 +15,28 @@ public class FireLevel : MonoBehaviour
     void Start()
     {
         currentIndex = 0;
-        effectLocation = GameObject.Find("/Campfire/FireEffect");
-        UpdateFireEffect();
+        fireParticles = GameObject.Find("/Campfire/Ground_Fire_Small");
+        //UpdateFireEffect();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentEffectObject != null)
+        if (fireParticles != null &&
+            fireParticles.transform.localScale.z != LevelManager.instance.Level)
         {
-            currentEffectObject.transform.localScale = new Vector3(1, 1, LevelManager.instance.Level);
+            Debug.Log("Fire up");
+            fireParticles.transform.localScale = 
+                new Vector3(LevelManager.instance.Level, 
+                LevelManager.instance.Level, LevelManager.instance.Level);
         }
-        //if(LevelManager.level>= currentIndex + 1)
-        if (testIndex != currentIndex)
-        {
-            currentIndex = testIndex;
-            //currentIndex++;
-            UpdateFireEffect();
-        }
+        ////if(LevelManager.level>= currentIndex + 1)
+        //if (testIndex != currentIndex)
+        //{
+        //    currentIndex = testIndex;
+        //    //currentIndex++;
+        //    UpdateFireEffect();
+        //}
     }
 
     private void UpdateFireEffect()
@@ -43,8 +47,8 @@ public class FireLevel : MonoBehaviour
         }
 
         currentEffectObject = (GameObject)Instantiate(FireEfects[currentIndex],
-            effectLocation.transform.position, Quaternion.identity);
-        currentEffectObject.transform.parent = effectLocation.transform;
+            fireParticles.transform.position, Quaternion.identity);
+        currentEffectObject.transform.parent = fireParticles.transform;
         currentEffect = currentEffectObject.GetComponent<ParticleSystem>();
     }
 }
