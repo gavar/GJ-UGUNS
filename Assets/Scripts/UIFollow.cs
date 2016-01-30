@@ -6,18 +6,22 @@ using UnityEngine;
 public class UIFollow : MonoBehaviour
 {
 	public Transform point;
-	protected RectTransform canvas;
+	protected RectTransform canvasRect;
 	protected RectTransform cacheTransform;
 
 	public void Start ()
 	{
 		cacheTransform = transform as RectTransform;
-		canvas = GetComponentInParent<Canvas>().transform as RectTransform;
+		var canvas = GetComponentInParent<Canvas>();
+		if (canvas != null) canvasRect = canvas.transform as RectTransform;
 	}
 
 	public void Update ()
-	{ //
-		cacheTransform.anchoredPosition = WorldToCanvasPosition(canvas, Camera.main, point.position);
+	{
+		if (point == null) return;
+		if (canvasRect == null) return;
+		if (cacheTransform == null) return;
+		cacheTransform.anchoredPosition = WorldToCanvasPosition(canvasRect, Camera.main, point.position);
 	}
 
 	private static Vector2 WorldToCanvasPosition (RectTransform canvas, Camera camera, Vector3 position)
