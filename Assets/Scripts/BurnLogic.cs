@@ -21,6 +21,7 @@ public class BurnLogic : MonoBehaviour
         if (LevelManager.instance.Score > 100*LevelManager.instance.Level)
         {
             LevelManager.instance.Level += 0.5f;
+            LevelManager.instance.GameLevel++;
             Debug.Log("level fucking up");
         }
     }
@@ -28,10 +29,10 @@ public class BurnLogic : MonoBehaviour
     public void burn()
     {
 		LevelManager.instance.Score += bad ? -score : score;
-        if(bad)
+        if(bad && LevelManager.instance.FireHp > 0f)
         {
             LevelManager.instance.FireHp -= 0.1f;
-        } else
+        } else if (LevelManager.instance.FireHp < 1f)
         {
             LevelManager.instance.FireHp += 0.05f;
         }
