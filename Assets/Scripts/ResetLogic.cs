@@ -29,7 +29,7 @@ public class ResetLogic : MonoBehaviour
 			Debug.Log ("instantiate object in reset logic");
 			currentItem = (GameObject)Instantiate (item, transform.position, Quaternion.identity);
 			currentItem.transform.parent = transform;
-            currentItem.transform.Find("Canvas").LookAt(GameObject.Find("Main Camera").transform);
+			currentItem.transform.Find("item_slider").LookAt(GameObject.Find("Main Camera").transform);
         }
 		rutineStarted = false;
 	}
