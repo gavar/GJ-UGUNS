@@ -25,10 +25,11 @@ public class ResetLogic : MonoBehaviour
 
 		randomId = (int) Random.Range (0, items.Count - 1);
 		item = items.ToArray () [randomId];
-		//Debug.Log ("instantiate object in reset logic");
-		currentItem = (GameObject)Instantiate(item, transform.position, transform.rotation);
-		currentItem.transform.parent = transform;
-
+		if (item != null) {
+			Debug.Log ("instantiate object in reset logic");
+			currentItem = (GameObject)Instantiate (item, transform.position, transform.rotation);
+			currentItem.transform.parent = transform;
+		}
 		rutineStarted = false;
 	}
 }
