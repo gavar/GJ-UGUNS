@@ -46,7 +46,7 @@ public class GameUI : MonoBehaviour
 	private void Repaint ()
 	{
 		var data = LevelManager.instance;
-		if (fireLevelBar) fireLevelBar.normalizedValue = data.Level;
+		if (fireLevelBar) fireLevelBar.normalizedValue = data.FireHp;
 		if (scoreText) scoreText.text = string.Format("{0:N0}", data.Score);
 		if (levelText) levelText.text = string.Format("LEVEL: {0}", data.GameLevel);
 	}

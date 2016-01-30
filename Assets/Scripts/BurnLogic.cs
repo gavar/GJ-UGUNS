@@ -28,6 +28,13 @@ public class BurnLogic : MonoBehaviour
     public void burn()
     {
 		LevelManager.instance.Score += bad ? -score : score;
+        if(bad)
+        {
+            LevelManager.instance.FireHp -= 0.1f;
+        } else
+        {
+            LevelManager.instance.FireHp += 0.05f;
+        }
     }
 
 
