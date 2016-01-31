@@ -81,7 +81,10 @@ public class BurnLogic : MonoBehaviour
 
 	public void OnDestroy ()
 	{
-		Destroy(buttons);
-		buttons = null;
+		if (buttons)
+		{
+			Destroy(buttons.gameObject);
+			buttons = null;
+		}
 	}
 }
