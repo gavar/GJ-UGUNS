@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &105844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 472948}
+  m_Layer: 0
+  m_Name: plank_animated
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &118646
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,6 +29,24 @@ GameObject:
   - 114: {fileID: 11473200}
   m_Layer: 0
   m_Name: goodItem5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &119680
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 436074}
+  - 33: {fileID: 3351750}
+  - 23: {fileID: 2318082}
+  - 95: {fileID: 9599544}
+  m_Layer: 0
+  m_Name: plank_animated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,23 +67,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &188170
-GameObject:
-  m_ObjectHideFlags: 0
+--- !u!4 &436074
+Transform:
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 482810}
-  - 33: {fileID: 3354096}
-  - 23: {fileID: 2329984}
-  m_Layer: 0
-  m_Name: plank
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_GameObject: {fileID: 119680}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.1762513, y: 1.1762513, z: 1.1762513}
+  m_Children: []
+  m_Father: {fileID: 472948}
+  m_RootOrder: 0
 --- !u!4 &439990
 Transform:
   m_ObjectHideFlags: 1
@@ -58,11 +86,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 482810}
   - {fileID: 446090}
+  - {fileID: 472948}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &446090
@@ -76,25 +104,26 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 439990}
-  m_RootOrder: 1
---- !u!4 &482810
+  m_RootOrder: 0
+--- !u!4 &472948
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188170}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_GameObject: {fileID: 105844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1762513, y: 1.1762513, z: 1.1762513}
-  m_Children: []
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 436074}
   m_Father: {fileID: 439990}
-  m_RootOrder: 0
---- !u!23 &2329984
+  m_RootOrder: 1
+--- !u!23 &2318082
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188170}
+  m_GameObject: {fileID: 119680}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -115,12 +144,12 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3354096
+--- !u!33 &3351750
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188170}
+  m_GameObject: {fileID: 119680}
   m_Mesh: {fileID: 4300000, guid: 3e025ab438d82144f9eb3c05f41988a1, type: 3}
 --- !u!65 &6582650
 BoxCollider:
@@ -134,6 +163,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6343753, y: 1.2, z: 1}
   m_Center: {x: -0.031188488, y: 0, z: 0}
+--- !u!95 &9599544
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119680}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a07914799e2e58b4c939f66989b6736a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11423464
 MonoBehaviour:
   m_ObjectHideFlags: 1
