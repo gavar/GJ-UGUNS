@@ -10,8 +10,9 @@ GameObject:
   - 4: {fileID: 478410}
   - 33: {fileID: 3396722}
   - 23: {fileID: 2398812}
+  - 95: {fileID: 9540934}
   m_Layer: 0
-  m_Name: plank
+  m_Name: plank_animated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,6 +61,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157838}
   m_Mesh: {fileID: 4300000, guid: 3e025ab438d82144f9eb3c05f41988a1, type: 3}
+--- !u!95 &9540934
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157838}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a07914799e2e58b4c939f66989b6736a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
