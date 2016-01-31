@@ -44,7 +44,8 @@ public class BurnLogic : MonoBehaviour
 
         ActionSoundControl.instance.PlayBurnSound();
 
-		LevelManager.instance.Score += bad ? -score : score;
+        if (!bad)
+            LevelManager.instance.Score += score;
 
 		if (LevelManager.instance.Score < 0)
 		{
@@ -98,8 +99,11 @@ public class BurnLogic : MonoBehaviour
 	{
         if (!LevelManager.instance.IsGameOver)
 			ActionSoundControl.instance.PlayThrowSound();
-        
-		Destroy(gameObject);
+
+        if(bad)
+        LevelManager.instance.Score += score;
+
+        Destroy(gameObject);
 	}
 
 	public void OnDestroy ()
