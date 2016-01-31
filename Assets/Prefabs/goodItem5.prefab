@@ -26,7 +26,6 @@ GameObject:
   - 114: {fileID: 11423464}
   - 114: {fileID: 11435640}
   - 65: {fileID: 6582650}
-  - 114: {fileID: 11473200}
   m_Layer: 0
   m_Name: goodItem5
   m_TagString: Untagged
@@ -61,12 +60,39 @@ GameObject:
   m_Component:
   - 4: {fileID: 446090}
   m_Layer: 0
+  m_Name: ui-buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &188528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 430558}
+  m_Layer: 0
   m_Name: ui-point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &430558
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 439990}
+  m_RootOrder: 0
 --- !u!4 &436074
 Transform:
   m_ObjectHideFlags: 1
@@ -89,8 +115,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 446090}
+  - {fileID: 430558}
   - {fileID: 472948}
+  - {fileID: 446090}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &446090
@@ -100,11 +127,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 439990}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!4 &472948
 Transform:
   m_ObjectHideFlags: 1
@@ -196,7 +223,7 @@ MonoBehaviour:
   timeEnded: 0
   burnLogic: {fileID: 11435640}
   procentage: 1
-  uiPoint: {fileID: 160816}
+  uiPoint: {fileID: 188528}
 --- !u!114 &11435640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,20 +238,7 @@ MonoBehaviour:
   Fire: {fileID: 0}
   bad: 0
   score: 10
---- !u!114 &11473200
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38222885d6ce3814c8a64d7b63e7b26a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Fire: {fileID: 0}
-  bad: 0
-  score: 1
+  buttonsPoint: {fileID: 160816}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

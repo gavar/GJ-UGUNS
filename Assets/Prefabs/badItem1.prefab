@@ -36,6 +36,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &176214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 402524}
+  m_Layer: 0
+  m_Name: ui-point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &180204
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,12 +75,24 @@ GameObject:
   m_Component:
   - 4: {fileID: 423512}
   m_Layer: 0
-  m_Name: ui-point
+  m_Name: ui-buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &402524
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 489436}
+  m_RootOrder: 1
 --- !u!4 &404862
 Transform:
   m_ObjectHideFlags: 1
@@ -85,11 +112,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 489436}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &489436
 Transform:
   m_ObjectHideFlags: 1
@@ -97,10 +124,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 632.47485, y: -4703.9814, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 499020}
+  - {fileID: 402524}
   - {fileID: 423512}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -193,6 +221,7 @@ MonoBehaviour:
   Fire: {fileID: 0}
   bad: 1
   score: 10
+  buttonsPoint: {fileID: 188122}
 --- !u!114 &11481230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,7 +238,7 @@ MonoBehaviour:
   timeEnded: 0
   burnLogic: {fileID: 11421266}
   procentage: 1
-  uiPoint: {fileID: 188122}
+  uiPoint: {fileID: 176214}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

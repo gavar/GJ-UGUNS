@@ -15,6 +15,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &132004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 435430}
+  m_Layer: 0
+  m_Name: ui-point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &140554
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,7 +39,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 405924}
   m_Layer: 0
-  m_Name: ui-point
+  m_Name: ui-buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,11 +88,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 435550}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &432234
 Transform:
   m_ObjectHideFlags: 1
@@ -90,6 +105,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 450452}
   m_RootOrder: 0
+--- !u!4 &435430
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 435550}
+  m_RootOrder: 1
 --- !u!4 &435550
 Transform:
   m_ObjectHideFlags: 1
@@ -101,6 +128,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450452}
+  - {fileID: 435430}
   - {fileID: 405924}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -195,7 +223,7 @@ MonoBehaviour:
   timeEnded: 0
   burnLogic: {fileID: 11445636}
   procentage: 1
-  uiPoint: {fileID: 140554}
+  uiPoint: {fileID: 132004}
 --- !u!114 &11445636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,6 +238,7 @@ MonoBehaviour:
   Fire: {fileID: 0}
   bad: 1
   score: 10
+  buttonsPoint: {fileID: 140554}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

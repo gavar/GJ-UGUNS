@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 422030}
   m_Layer: 0
-  m_Name: ui-point
+  m_Name: ui-buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +48,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &160490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 464400}
+  m_Layer: 0
+  m_Name: ui-point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &191824
 GameObject:
   m_ObjectHideFlags: 1
@@ -73,11 +88,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462306}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!4 &462306
 Transform:
   m_ObjectHideFlags: 1
@@ -88,9 +103,22 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 422030}
+  - {fileID: 464400}
   - {fileID: 481454}
+  - {fileID: 422030}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &464400
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 462306}
   m_RootOrder: 0
 --- !u!4 &481454
 Transform:
@@ -195,7 +223,7 @@ MonoBehaviour:
   timeEnded: 0
   burnLogic: {fileID: 11488126}
   procentage: 1
-  uiPoint: {fileID: 102766}
+  uiPoint: {fileID: 160490}
 --- !u!114 &11488126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,6 +238,7 @@ MonoBehaviour:
   Fire: {fileID: 0}
   bad: 0
   score: 10
+  buttonsPoint: {fileID: 102766}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
