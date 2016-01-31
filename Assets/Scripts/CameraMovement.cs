@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CameraMovement : MonoBehaviour
 {
+	public static CameraMovement instance;
+
     public GameObject LookAt;
     public GameObject TargetLocation;
 
@@ -13,6 +15,7 @@ public class CameraMovement : MonoBehaviour
 
     void Start()
     {
+	    instance = this;
         InitialPosition = gameObject.transform.position;
         TargetLocationVec3 = TargetLocation.transform.position;
         LookAtVec3 = LookAt.transform.position;

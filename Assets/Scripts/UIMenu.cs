@@ -16,6 +16,7 @@ public class UIMenu : MonoBehaviour
 	public GameObject howToPlayLayout;
 	public GameObject mainMenuLayout;
 	public GameObject toMainMenuLayout;
+	protected LayoutType prevLayout;
 
 	public void Awake () { instance = this; }
 
@@ -29,6 +30,10 @@ public class UIMenu : MonoBehaviour
 
 	public void Setlayout (LayoutType layout)
 	{
+		if (prevLayout == LayoutType.GameOver)
+			CameraMovement.instance.MoveToInitial();
+
+		prevLayout = layout;
 		rootLayout.SetActive(layout != LayoutType.Game);
 		gameOverLayout.SetActive(layout == LayoutType.GameOver);
 		mainMenuLayout.SetActive(layout == LayoutType.MainMenu);
