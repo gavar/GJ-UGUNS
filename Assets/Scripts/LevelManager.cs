@@ -46,6 +46,6 @@ public class LevelManager : ReactiveObject
 	{
 		GameStarted = false;
         IsGameOver = true;
-		UIMenu.instance.Setlayout(UIMenu.LayoutType.GameOver);
+		UIMenu.instance.GameOver();
 	}
 }

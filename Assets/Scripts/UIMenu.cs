@@ -16,6 +16,7 @@ public class UIMenu : MonoBehaviour
 	public GameObject howToPlayLayout;
 	public GameObject mainMenuLayout;
 	public GameObject toMainMenuLayout;
+	public Text gameOverScore;
 	protected LayoutType prevLayout;
 
 	public void Awake () { instance = this; }
@@ -63,7 +64,13 @@ public class UIMenu : MonoBehaviour
         Setlayout(LayoutType.HowToPlay);
     }
 
-    public enum LayoutType
+	public void GameOver ()
+	{
+        Setlayout(LayoutType.GameOver);
+		if (gameOverScore) gameOverScore.text = LevelManager.instance.Score.ToString("N0");
+	}
+
+	public enum LayoutType
 	{
 		MainMenu,
 		HowToPlay,
