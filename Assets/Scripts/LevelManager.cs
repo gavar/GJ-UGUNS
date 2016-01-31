@@ -14,8 +14,9 @@ public class LevelManager : ReactiveObject
 	[SerializeField] protected int gameLevel = 1;
 	[SerializeField] protected int maxLevel = 10;
 	[SerializeField] protected bool gameStarted = false;
+    [SerializeField] protected bool isGameOver = false;
 
-	public float Level { get { return level; } set { SetProperty(ref level, value, "Level"); } }
+    public float Level { get { return level; } set { SetProperty(ref level, value, "Level"); } }
 	public float FireHp
 	{
 		get { return fireHP; }
@@ -29,19 +30,22 @@ public class LevelManager : ReactiveObject
 	public int Score { get { return score; } set { SetProperty(ref score, value, "Score"); } }
 	public int MaxLevel { get { return maxLevel; } set { SetProperty(ref maxLevel, value, "MaxLevel"); } }
 	public bool GameStarted { get { return gameStarted; } protected set { SetProperty(ref gameStarted, value, "GameStarted"); } }
+    public bool IsGameOver { get { return isGameOver; } protected set { SetProperty(ref isGameOver, value, "IsGameOver"); } }
 
-	public void StartGame ()
+    public void StartGame ()
 	{
 		score = 0;
 		level = 1f;
 		fireHP = .5f;
 		gameLevel = 1;
 		GameStarted = true;
+        IsGameOver = false;
 	}
 
 	public void GameOver ()
 	{
 		GameStarted = false;
+        IsGameOver = true;
 		UIMenu.instance.Setlayout(UIMenu.LayoutType.GameOver);
 	}
 }
