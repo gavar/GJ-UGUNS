@@ -96,12 +96,9 @@ public class BurnLogic : MonoBehaviour
 
 	public void Reject ()
 	{
-        if (LevelManager.instance.IsGameOver)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        ActionSoundControl.instance.PlayThrowSound();
+        if (!LevelManager.instance.IsGameOver)
+			ActionSoundControl.instance.PlayThrowSound();
+        
 		Destroy(gameObject);
 	}
 
