@@ -20,6 +20,7 @@ public class UIMenu : MonoBehaviour
 			Debug.Log("PLAY");
 			root.SetActive(false);
 			GameUI.instance.root.SetActive(true);
+            LevelManager.instance.GameStarted = true;
 		});
 	}
 }

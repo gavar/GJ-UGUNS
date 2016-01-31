@@ -9,11 +9,13 @@ public class ResetLogic : MonoBehaviour
 	private GameObject item;
     private GameObject currentItem;
 	private int randomId;
-	public float waitTime;
-	private bool rutineStarted = false;
+	private float waitTime;
+    public float fromWaitTime = 0.5f;
+    public float toWaitTime = 2f;
+    private bool rutineStarted = false;
 
 	void Update() {
-		if (currentItem == null && !rutineStarted) {
+		if (currentItem == null && !rutineStarted && LevelManager.instance.GameStarted) {
 			rutineStarted = true;
 			StartCoroutine (InstantiateItem ());
 		}
@@ -21,6 +23,7 @@ public class ResetLogic : MonoBehaviour
 
 	IEnumerator InstantiateItem() {
 
+        waitTime = Random.Range(fromWaitTime, toWaitTime);
 		yield return new WaitForSeconds (waitTime);
 
 		randomId = (int) Random.Range (0, items.Count);
@@ -29,8 +32,6 @@ public class ResetLogic : MonoBehaviour
 		if (item != null) {
 			currentItem = (GameObject)Instantiate (item, transform.position, Quaternion.identity);
 			currentItem.transform.parent = transform;
-			// LookAt is now in Timer
-			// currentItem.transform.Find("item_slider").LookAt(GameObject.Find("Main Camera").transform);
         }
 		rutineStarted = false;	
 	}
