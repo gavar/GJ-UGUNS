@@ -40,6 +40,7 @@ public class LevelManager : ReactiveObject
 		gameLevel = 1;
 		GameStarted = true;
         IsGameOver = false;
+		Notify(null);
 	}
 
 	public void GameOver ()
