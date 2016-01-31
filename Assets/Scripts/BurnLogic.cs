@@ -33,7 +33,13 @@ public class BurnLogic : MonoBehaviour
 
 	private void burn ()
 	{
-		ActionSoundControl.instance.PlayBurnSound();
+        if (LevelManager.instance.IsGameOver)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        ActionSoundControl.instance.PlayBurnSound();
 
 		LevelManager.instance.Score += bad ? -score : score;
 
@@ -50,7 +56,9 @@ public class BurnLogic : MonoBehaviour
 		{
 			LevelManager.instance.FireHp += 0.05f;
 		}
-	}
+
+        Destroy(gameObject);
+    }
 
 	private void OnMouseDown ()
 	{
@@ -60,6 +68,12 @@ public class BurnLogic : MonoBehaviour
 
 	public void TimeEnded ()
 	{
+        if(LevelManager.instance.IsGameOver)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
 		if (bad)
 		{
 			burn();
@@ -75,13 +89,21 @@ public class BurnLogic : MonoBehaviour
 
 	public void Reject ()
 	{
-		ActionSoundControl.instance.PlayThrowSound();
+        if (LevelManager.instance.IsGameOver)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        ActionSoundControl.instance.PlayThrowSound();
 		Destroy(gameObject);
 	}
 
 	public void OnDestroy ()
 	{
-		Destroy(buttons);
-		buttons = null;
+		if (buttons)
+		{
+			Destroy(buttons.gameObject);
+			buttons = null;
+		}
 	}
 }
