@@ -26,7 +26,7 @@ public class BurnLogic : MonoBehaviour
         }
     }
 
-    public void burn()
+    private void burn()
     {
 
         ActionSoundControl.instance.PlayBurnSound();
@@ -49,6 +49,29 @@ public class BurnLogic : MonoBehaviour
 
 
     void OnMouseDown()
+    {
+        ActionSoundControl.instance.PlayThrowSound();
+        Destroy(gameObject);
+    }
+
+    public void TimeEnded()
+    {
+        if(bad)
+        {
+            burn();
+        } else
+        {
+            ActionSoundControl.instance.PlayThrowSound();
+            Destroy(gameObject);
+        }
+    }
+
+    public void Confirm()
+    {
+        burn();
+    }
+
+    public void Reject()
     {
         ActionSoundControl.instance.PlayThrowSound();
         Destroy(gameObject);
