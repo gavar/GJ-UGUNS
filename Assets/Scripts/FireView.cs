@@ -14,7 +14,7 @@ public class FireView : MonoBehaviour
 
 	protected void Repaint ()
 	{
-		var factor = LevelManager.instance.Level;
+		var factor = LevelManager.instance.FireHp;
 		transform.localScale = baseScale * factor;
 	}
 }
