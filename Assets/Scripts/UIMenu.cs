@@ -43,6 +43,7 @@ public class UIMenu : MonoBehaviour
         ActionSoundControl.instance.PlayButtonSound();
 		Setlayout(LayoutType.Game);
 		LevelManager.instance.StartGame();
+        GameObject.Find("Main Camera").GetComponent<CameraMovement>().MoveToTarget();
 	}
 
     public void MainMenu()
