@@ -41,10 +41,8 @@ public class UIMenu : MonoBehaviour
 	{
 		Debug.Log("PLAY");
 		Setlayout(LayoutType.Game);
-		LevelManager.instance.GameStarted = true;
+		LevelManager.instance.StartGame();
 	}
-
-	public void GameOver () { Setlayout(LayoutType.GameOver); }
 
 	public enum LayoutType
 	{
