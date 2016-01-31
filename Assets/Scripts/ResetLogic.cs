@@ -15,6 +15,12 @@ public class ResetLogic : MonoBehaviour
     private bool rutineStarted = false;
 
 	void Update() {
+
+        if(currentItem != null && LevelManager.instance.IsGameOver)
+        {
+            Destroy(currentItem);
+        }
+
 		if (currentItem == null && !rutineStarted && LevelManager.instance.GameStarted && !LevelManager.instance.IsGameOver) {
 			rutineStarted = true;
 			StartCoroutine (InstantiateItem ());
