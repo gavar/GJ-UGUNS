@@ -29,6 +29,12 @@ public class BurnLogic : MonoBehaviour
     public void burn()
     {
 		LevelManager.instance.Score += bad ? -score : score;
+
+        if (LevelManager.instance.Score < 0)
+        {
+            LevelManager.instance.Score = 0;
+        }
+
         if(bad && LevelManager.instance.FireHp > 0f)
         {
             LevelManager.instance.FireHp -= 0.1f;
