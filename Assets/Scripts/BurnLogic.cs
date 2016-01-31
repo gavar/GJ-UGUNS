@@ -15,9 +15,12 @@ public class BurnLogic : MonoBehaviour
 	// Use this for initialization
 	private void Start ()
 	{
-		buttons = GameUI.GetItemButtons(buttonsPoint ? buttonsPoint : gameObject);
-		buttons.confirm.onClick.AddListener(Confirm);
-		buttons.reject.onClick.AddListener(Reject);
+		if (buttons == null)
+		{
+			buttons = GameUI.GetItemButtons(buttonsPoint ? buttonsPoint : gameObject);
+			buttons.confirm.onClick.AddListener(Confirm);
+			buttons.reject.onClick.AddListener(Reject);
+		}
 	}
 
 	// Update is called once per frame
@@ -54,8 +57,8 @@ public class BurnLogic : MonoBehaviour
 
 	private void OnMouseDown ()
 	{
-		ActionSoundControl.instance.PlayThrowSound();
-		Destroy(gameObject);
+		//ActionSoundControl.instance.PlayThrowSound();
+		//Destroy(gameObject);
 	}
 
 	public void TimeEnded ()
@@ -67,11 +70,15 @@ public class BurnLogic : MonoBehaviour
 		else
 		{
 			ActionSoundControl.instance.PlayThrowSound();
-			Destroy(gameObject);
 		}
+		Destroy(gameObject);
 	}
 
-	public void Confirm () { burn(); }
+	public void Confirm ()
+	{
+		burn();
+		Destroy(gameObject);
+	}
 
 	public void Reject ()
 	{
