@@ -42,7 +42,7 @@ public class Timer : MonoBehaviour
 
 		if (time <= 0 && burnLogic != null)
 		{
-			burnLogic.timeEnded();
+			burnLogic.TimeEnded();
 			timeEnded = true;
 		}
 	}
