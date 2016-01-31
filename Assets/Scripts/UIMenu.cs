@@ -23,8 +23,8 @@ public class UIMenu : MonoBehaviour
 	{
 		GameUI.instance.root.SetActive(false);
 		btnPlay.onClick.AddListener(Play);
-		btnMainMenu.onClick.AddListener(() => Setlayout(LayoutType.MainMenu));
-		btnHowToPlay.onClick.AddListener(() => Setlayout(LayoutType.HowToPlay));
+		btnMainMenu.onClick.AddListener(MainMenu);
+		btnHowToPlay.onClick.AddListener(HowToPlay);
 	}
 
 	public void Setlayout (LayoutType layout)
@@ -40,11 +40,24 @@ public class UIMenu : MonoBehaviour
 	public void Play ()
 	{
 		Debug.Log("PLAY");
+        ActionSoundControl.instance.PlayButtonSound();
 		Setlayout(LayoutType.Game);
 		LevelManager.instance.StartGame();
 	}
 
-	public enum LayoutType
+    public void MainMenu()
+    {
+        ActionSoundControl.instance.PlayButtonSound();
+        Setlayout(LayoutType.MainMenu);
+    }
+
+    public void HowToPlay()
+    {
+        ActionSoundControl.instance.PlayButtonSound();
+        Setlayout(LayoutType.HowToPlay);
+    }
+
+    public enum LayoutType
 	{
 		MainMenu,
 		HowToPlay,

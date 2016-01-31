@@ -28,6 +28,9 @@ public class BurnLogic : MonoBehaviour
 
     public void burn()
     {
+
+        ActionSoundControl.instance.PlayBurnSound();
+
 		LevelManager.instance.Score += bad ? -score : score;
 
         if (LevelManager.instance.Score < 0)
@@ -37,7 +40,7 @@ public class BurnLogic : MonoBehaviour
 
         if(bad && LevelManager.instance.FireHp > 0f)
         {
-            LevelManager.instance.FireHp -= 0.1f;
+            LevelManager.instance.FireHp -= 0.2f;
         } else if (LevelManager.instance.FireHp < 1f)
         {
             LevelManager.instance.FireHp += 0.05f;
@@ -47,6 +50,7 @@ public class BurnLogic : MonoBehaviour
 
     void OnMouseDown()
     {
+        ActionSoundControl.instance.PlayThrowSound();
         Destroy(gameObject);
     }
 }
